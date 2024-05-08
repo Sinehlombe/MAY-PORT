@@ -37,14 +37,21 @@
       </div>
     </nav>
     <section id="profile">
+      
+
       <div class="section__pic-container">
-        <img src="WhatsApp Image 2024-05-08 at 10.26.19 (1).jpeg" alt="profile picture" style="border-radius: 20%;" />
+        <img src="WhatsApp Image 2024-05-08 at 10.26.19 (1).jpeg" alt="profile picture" style="border-radius: 10%; border: 4px solid red; border-radius: 20px; border-image: linear-gradient(to bottom, red, black);
+        border-image-slice: 1;"/>
     </div>
+    
+    
     
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Onwaba Nobhitywana</h1>
         <p class="section__text__p2">FULLSTACK Developer</p>
+
+      
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -359,6 +366,21 @@
       </nav>
       <p>Copyright &#169; 2024Onwaba Nobhitywana. All Rights Reserved.</p>
     </footer>
+
+
+
+    <script>
+      const roleElement = document.querySelector('.section__text__p2');
+      const roles = ['Full Stack Developer', 'Web Developer', 'UI/UX Designer'];
+      let index = 0;
+  
+      function updateRole() {
+          roleElement.textContent = roles[index];
+          index = (index + 1) % roles.length;
+      }
+  
+      setInterval(updateRole, 2000); // Change role every 2 seconds (2000 milliseconds)
+  </script>
     <script src="script.js"></script>
   </body>
 </html>
