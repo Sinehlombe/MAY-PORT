@@ -369,6 +369,16 @@ article .icon {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
+
+  transition: filter 0.3s; /* Smooth transition for the effect */
+  filter: grayscale(100%); /* Desaturate the image by default */
+  }
+
+
+
+
+.project-img:hover {
+filter: grayscale(0%); /* Apply full color saturation on hover */
 }
 
 .project-title {
@@ -437,31 +447,22 @@ footer p {
 
 
 
+
+
 .carousel{
   height:600px;
   perspective:250px;
-
+  display: flex;
+  
+  
 }
 .carousel .carousel-items{
   width:450px;
-}
-.carousel .indicators .indicators-items{
-  background: red;
-
+  margin: 0;
+  padding: 10px;
 }
 
-.img{
-  width:75px;
-  height:75px;
-  border-radius: 50px;
-  overflow: hidden;
-  display: inline-block;
-  margin: 0 auto;
-}
-.img img{
-  width:100%;
-  
-}
+
 
 .content{
   background: white;
@@ -476,17 +477,6 @@ footer p {
   z-index: 1;
 }
 
-.content::before{
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 115px;
-  background:red;
-  top:0;
-  z-index:-1;
-  border-radius: 0 0 50px;
-
-}
 
 .content h1 {
 font-size: 40px;
@@ -506,3 +496,5 @@ color:red;
   margin:0 15px;
   color: red;
 }
+
+
